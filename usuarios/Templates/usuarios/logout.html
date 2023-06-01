@@ -1,0 +1,11 @@
+{%  extends 'investimentos/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+<div class="container">
+    <h1>Você Deslogou do Sistema</h1>
+    <form method='POST'>
+      {% csrf_token %} 
+      <a href="{% url 'login' %}"> Logar Novamente</a>
+    </form>
+</div>
+{% endblock %}
